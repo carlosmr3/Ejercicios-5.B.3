@@ -1,0 +1,39 @@
+{
+    "ordenador": {
+        "placa base": "ASUS ROG STRIX B550-F GAMING",
+        "procesador": "AMD Ryzen 7 2700X",
+        "memoria RAM": "Corsair Vengeance LPX 16GB (2 x 8GB) DDR4-3200",
+        "tarjeta gráfica": "NVIDIA GeForce RTX 2080TI",
+        "almacenamiento": [
+            "Samsung 970 EVO Plus 1TB NVMe SSD",
+            "Western Digital Blue 2TB HDD",
+            "Crucial MX500 500GB SATA SSD",
+            "Seagate Barracuda 4TB HDD"
+        ],
+        "fuente de alimentación": "Corsair RM750x 750W 80 Plus Gold",
+        "refrigeración": "Noctua NH-D15 chromax.black CPU Cooler",
+        "caja": "NZXT H510 Elite Mid Tower Case"
+    },
+    "movil": {
+        "marca": "Apple",
+        "modelo": "iPhone 13 Pro Max",
+        "procesador": "Apple A15 Bionic",
+        "memoria RAM": "6GB",
+        "almacenamiento": "512 GB",
+        "pantalla": "6.7 pulgadas Super Retina XDR OLED",
+        "cámara trasera": "Triple cámara de 12MP (gran angular, ultra gran angular, teleobjetivo)",
+        "cámara frontal": "12MP TrueDepth",
+        "batería": "Hasta 28 horas de reproducción de video"
+    },
+    "televisor": {
+        "marca": "Samsung",
+        "modelo": "QLED Q90T",
+        "tamaño de pantalla": "65 pulgadas",
+        "resolución": "4K UHD (3840 x 2160)",
+        "tecnología de pantalla": "QLED",
+        "frecuencia de actualización": "120 Hz",
+        "puertos HDMI": 4,
+        "puertos USB": 2,
+        "compatibilidad con HDR": ["HDR10", "HDR10+", "HLG"]
+    }
+}
