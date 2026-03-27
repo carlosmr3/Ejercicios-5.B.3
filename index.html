@@ -5,9 +5,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        fieldset {
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input {
+            width: 30%;            
+        }
+        label {
+            display: inline-block;
+            width: 190px;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Datos de mis dispositivos</h1>
+    <form action="">
+        <fieldset>
+            <legend>Ordenador</legend>
+            <p><label for="placaBase">Placa Base:</label>
+                <input type="text" id="placaBase" name="placaBase">
+            </p>
+            <p><label for="procesador">Procesador:</label>
+                <input type="text" id="procesador" name="procesador">
+            </p>
+            <p><label for="memoriaRAM">Memoria RAM:</label>
+                <input type="text" id="memoriaRAM" name="memoriaRAM">
+            </p>
+            <p><label for="tarjetaGrafica">Tarjeta Gráfica:</label>
+                <input type="text" id="tarjetaGrafica" name="tarjetaGrafica">
+            </p>
+            <p><label for="almacenamiento">Almacenamiento:</label>
+                <input type="text" id="almacenamiento" name="almacenamiento">
+            </p>
+            <p><label for="refrigeracion">Refrigeración:</label>
+                <input type="text" id="refrigeracion" name="refrigeracion">
+            </p>
+            <p><label for="fuenteAlimentacion">Fuente de Alimentación:</label>
+                <input type="text" id="fuenteAlimentacion" name="fuenteAlimentacion">
+            </p>
+            <p><label for="caja">Caja:</label>
+                <input type="text" id="caja" name="caja">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Móvil</legend>
+            <p><label for="marcaM">Marca:</label>
+                <input type="text" id="marcaM" name="marcaM">
+            </p>
+            <p><label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo">
+            </p>
+            <p><label for="procesadorM">Procesador:</label>
+                <input type="text" id="procesadorM" name="procesadorM">
+            </p>
+            <p><label for="memoriaRAMM">Memoria RAM:</label>
+                <input type="text" id="memoriaRAMM" name="memoriaRAMM">
+            </p>
+            <p><label for="almacenamientoM">Almacenamiento:</label>
+                <input type="text" id="almacenamientoM" name="almacenamientoM">
+            </p>
+            <p><label for="pantalla">Pantalla:</label>
+                <input type="text" id="pantalla" name="pantalla">
+            </p>
+            <p><label for="camaraFrontal">Cámara Frontal:</label>
+                <input type="text" id="camaraFrontal" name="camaraFrontal">
+            </p>
+            <p><label for="camaraTrasera">Cámara Trasera:</label>
+                <input type="text" id="camaraTrasera" name="camaraTrasera">
+            </p>
+            <p><label for="bateria">Batería:</label>
+                <input type="text" id="bateria" name="bateria">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Televisor</legend>
+            <p><label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca">
+            </p>
+            <p><label for="modeloT">Modelo:</label>
+                <input type="text" id="modeloT" name="modeloT">
+            </p>
+            <p><label for="tamañoPantalla">Tamaño de Pantalla:</label>
+                <input type="text" id="tamañoPantalla" name="tamañoPantalla">
+            </p>
+            <p><label for="resolucion">Resolución:</label>
+                <input type="text" id="resolucion" name="resolucion">
+            </p>
+            <p><label for="tecnologiaPantalla">Tecnología de Pantalla:</label>
+                <input type="text" id="tecnologiaPantalla" name="tecnologiaPantalla">
+            </p>
+            <p><label for="frecuenciaActualizacion">Frecuencia de Actualización:</label>
+                <input type="text" id="frecuenciaActualizacion" name="frecuenciaActualizacion">
+            </p>
+            <p><label for="puertosHdmi">Puertos HDMI:</label>
+                <input type="text" id="puertosHdmi" name="puertosHdmi">
+            </p>
+            <p><label for="puertosUsb">Puertos USB:</label>
+                <input type="text" id="puertosUsb" name="puertosUsb">
+            </p>
+            <p><label for="compatibilidadVideo">Compatibilidad de Video:</label>
+                <input type="text" id="compatibilidadVideo" name="compatibilidadVideo">
+            </p>
+        </fieldset>
+
+
+
+
+    </form>
     <script>
         fetch('misDispositivos.json')
             .then(response => response.json())
@@ -15,9 +125,35 @@
                 alert(dispositivos.ordenador.almacenamiento[1]);
                 alert(dispositivos.movil.modelo);
                 alert(dispositivos.televisor["tecnología de pantalla"]);
+                document.getElementById('placaBase').value = dispositivos.ordenador["placa base"];
+                document.getElementById('procesador').value = dispositivos.ordenador.procesador;
+                document.getElementById('memoriaRAM').value = dispositivos.ordenador["memoria RAM"];
+                document.getElementById('tarjetaGrafica').value = dispositivos.ordenador["tarjeta gráfica"];
+                document.getElementById('almacenamiento').value = dispositivos.ordenador.almacenamiento.join(', ');
+                document.getElementById('refrigeracion').value = dispositivos.ordenador.refrigeración;
+                document.getElementById('fuenteAlimentacion').value = dispositivos.ordenador["fuente de alimentación"];
+                document.getElementById('caja').value = dispositivos.ordenador.caja;
+                document.getElementById('marcaM').value = dispositivos.movil.marca;
+                document.getElementById('modelo').value = dispositivos.movil.modelo;
+                document.getElementById('procesadorM').value = dispositivos.movil.procesador;
+                document.getElementById('memoriaRAMM').value = dispositivos.movil["memoria RAM"];
+                document.getElementById('almacenamientoM').value = dispositivos.movil.almacenamiento;
+                document.getElementById('pantalla').value = dispositivos.movil.pantalla;
+                document.getElementById('camaraFrontal').value = dispositivos.movil["cámara frontal"];
+                document.getElementById('camaraTrasera').value = dispositivos.movil["cámara trasera"];
+                document.getElementById('bateria').value = dispositivos.movil.batería;
+                document.getElementById('marca').value = dispositivos.televisor.marca;
+                document.getElementById('modeloT').value = dispositivos.televisor.modelo;
+                document.getElementById('tamañoPantalla').value = dispositivos.televisor["tamaño de pantalla"];
+                document.getElementById('resolucion').value = dispositivos.televisor.resolución;
+                document.getElementById('tecnologiaPantalla').value = dispositivos.televisor["tecnología de pantalla"];
+                document.getElementById('frecuenciaActualizacion').value = dispositivos.televisor["frecuencia de actualización"];
+                document.getElementById('puertosHdmi').value = dispositivos.televisor["puertos HDMI"];
+                document.getElementById('puertosUsb').value = dispositivos.televisor["puertos USB"];
+                document.getElementById('compatibilidadVideo').value = dispositivos.televisor["compatibilidad de video"];
+
+
             })
-
-
     </script>
 </body>
 
